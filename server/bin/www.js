@@ -5,7 +5,7 @@
  */
 
  var app = require('../app');
- var debug = require('debug')('prof:server');
+ var debug = require('debug')('projnotes:server');
  var http = require('http');
  const { colors } = require('debug/src/browser');
  
@@ -13,7 +13,7 @@
   * Get port from environment and store in Express.
   */
  /**process.env.PORT Forma de acceder a la variable de entorno */
- var port = normalizePort(process.env.port || '3000');
+ var port = normalizePort(process.env.PORT || '3000');
  // app es una instancia de ExpressJs[ ] [ NODE ]
  app.set('port', port);
  
@@ -90,6 +90,6 @@
      ? 'pipe ' + addr
      : 'port ' + addr.port;
    debug('Listening on ' + bind);
-   console.log(`Servidor escuchando... en ${app.get('port')}`)
+   console.log(`💫 Servidor escuchando... en ${app.get('port')}`)
  
- } 
+ }
