@@ -5,9 +5,9 @@
   "scripts": {
     "start": "node ./dist/bin/www",
     "dev": "babel-watch ./server/bin/www",
-    "clean": "rm -rf dist",
+    "build:s": "npm run clean:cp && babel ./server --out-dir dist --copy-files",
     "clean:cp": "rimraf dist",
-    "build:s": "npm run clean:cp && babel ./server --out-dir dist --copy-files"
+    "client:server": "SET NODE_ENV=development && webpack serve --config ./webpack.config.js --mode development"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
