@@ -16,10 +16,9 @@ import webpack from 'webpack';
 import WebpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
 // importando configurador de plantillas
-import templateEngineConfigurator from './Config/templetateEngine';
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
-import aboutRouter from './routes/about';
+import templateEngineConfigurator from './Config/templateEngine';
+// Importando enrutado principal
+import router from './routes/router';
 
 // importando nuestro logger
 import winston from './Config/winston';
@@ -86,9 +85,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Registrando las rutas en la App
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/about', aboutRouter);
+router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -117,5 +114,3 @@ app.use((err, req, res) => {
 // Exportando instancia de app
 // usando Js moderno
 export default app;
-
-
