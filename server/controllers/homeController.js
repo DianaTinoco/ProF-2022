@@ -18,7 +18,7 @@ const index = (req, res) => {
     emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
   // View-Models
   const viewModel = {
-    title: 'Index Controller Working!!!',
+    title: 'Proyecto Final !!!',
     author: 'Diana Laura Paredes Tinoco',
     emojie,
   };
@@ -30,7 +30,10 @@ const about = (req, res) => {
   res.render('home/aboutView', {
     name: 'Diana Laura',
     email: 'dtinoco152@gmail.com',
-    url: 'https:',
+    url: 'https://github.com/DianaTinoco/primer-pwpcI-2021',
+    description:
+      'Aplicación que te permite registrar ideas de proyectos. PwpcII - 2022A',
+    version: '0.0.alpha',
   });
 };
 
