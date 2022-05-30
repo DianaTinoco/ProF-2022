@@ -33,9 +33,9 @@ module.exports = {
                                     '@babel/preset-env',{
                                         modules: false,
                                         useBuiltIns: 'usage',
-                                        targets: {
-                                            "chrome":"80"
-                                          },
+                                        targets:{
+                                            'chrome': 80
+                                        },
                                         corejs: 3,
                                     }
                                 ]
@@ -47,12 +47,12 @@ module.exports = {
             // 3.2 Reglas para Css
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [MiniCssExtractPlugin.loader,'css-loader'],
             }
         ]
     },
     // 4. Plugins
     plugins: [ new MiniCssExtractPlugin({
-        filename: path.join('stylesheets','style.css')
+        filename: path.join('stylesheets','styles.css')
     })]
 };
