@@ -10,8 +10,10 @@ import app from '@s/app';
 import Debug from 'debug';
 import http from 'http';
 
-// importando nuestro logger
+// Importando nuestro logger
 import winston from '../Config/winston';
+// Importando el objeto de las llaves de configuracion
+import configKeys from '../Config/configKeys';
 
 // Creando instancia del debugger
 const debug = Debug('prof:server');
@@ -20,7 +22,7 @@ const debug = Debug('prof:server');
  * Get port from environment and store in Express.
  */
 /** process.env.PORT Forma de acceder a la variable de entorno */
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(configKeys.port || '5000');
 // app es una instancia de ExpressJs[ ] [ NODE ]
 app.set('port', port);
 
