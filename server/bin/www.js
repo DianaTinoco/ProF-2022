@@ -10,13 +10,33 @@ import app from '@s/app';
 import Debug from 'debug';
 import http from 'http';
 
-// Importando nuestro logger
+// importando nuestro logger
 import winston from '../Config/winston';
 // Importando el objeto de las llaves de configuracion
 import configKeys from '../Config/configKeys';
 
 // Creando instancia del debugger
-const debug = Debug('prof:server');
+const debug = Debug('projnotes:server');
+
+/*
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+
+  if (Number.isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
 
 /**
  * Get port from environment and store in Express.
@@ -31,35 +51,6 @@ app.set('port', port);
  */
 
 const server = http.createServer(app); // (req, res, next, err) => {}
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port); // Pone al server a escuchar
-// Se registran eventos
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  const port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
 
 /**
  * Event listener for HTTP server "error" event.
@@ -97,3 +88,12 @@ function onListening() {
   debug(`Listening on  ${bind}`);
   winston.info(`Servidor escuchando 😜 ... en ${app.get('port')}`);
 }
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port); // Pone al server a escuchar
+// Se registran eventos
+server.on('error', onError);
+server.on('listening', onListening);
