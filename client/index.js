@@ -1,3 +1,8 @@
+// Incorporando estilos
+// a mi bundle
+import './styles/styles.css'
+import './styles/mystyle.css'
+
 console.log("🎁 Webpack Working!!!");
 
 // Default parameters ES6/2015
@@ -16,7 +21,7 @@ function resolveAfter2Seconds() {
 }
 
 async function asyncCall() {
-  console.log("Calling asyn function!!!");
+  console.log("Calling async function!!!");
   const result = await resolveAfter2Seconds();
   console.log(result); // Imprime "function resolve" en la consola
 }
