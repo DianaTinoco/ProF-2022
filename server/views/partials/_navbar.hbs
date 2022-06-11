@@ -4,17 +4,25 @@
   {{>_operations}}
   <!-- Fin Operaciones -->
 </ul>
+<!-- Se crea una estructura Dropdown -->
+<ul id="dropdownMenu" class="dropdown-content">
+  <!-- Operaciones -->
+  {{>_operations}}
+  <!-- Fin Operaciones -->
+</ul>
 
 <nav class="light-blue darken-4">
   <div class="container">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Proyecto Final 🕶</a>
+      <a href="/" class="brand-logo">Control de Acceso</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down" >
         <li><a href="/">Inicio</a></li>
-        <li><a href="/about">Acerca de ...</a></li>
+        <li><a href="/about">Administradores</a></li>
+        <li><a href="/area">Areas</a>
+        <li><a href="/regis">Registros</a></li>
         <li>
           <a href="#" class="dropdown-trigger" 
-             data-target="dropdownMenu">Acciones
+             data-target="dropdownMenu">Usuarios
             <i class="material-icons right">arrow_drop_down</i></a>
         </li>
       </ul>
@@ -23,13 +31,19 @@
       <i class="material-icons">menu</i>
       </a>
       <ul id="slide-out" class="sidenav">
-        <li><a href="/">Inicio</a>
-        </li>
-        <!-- Operaciones -->
-        {{>_operations}}
-        <!-- Divisor -->
+        <li><a href="/">Inicio</a></li>
         <li class="divider"></li>
-        <li><a href="/about">Acerca de ...</a></li>
+        <li><a href="/about">Administradores</a></li>
+        <li class="divider"></li>
+        <li><a href="/area">Areas</a>
+        <li class="divider"></li>
+        <li><a href="/regis">Registros</a></li>
+        <li class="divider"></li>
+        <li>
+          <a href="#" class="dropdown-trigger" 
+             data-target="dropdownMenu">Usuarios
+            <i class="material-icons right">arrow_drop_down</i></a>
+        </li>
       </ul>
     </div>
   </div>

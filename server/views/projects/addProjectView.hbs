@@ -2,7 +2,7 @@
   <div class="col s12 m10 offset-m1 l8 offset-l2">
     <div class="card">
       <div class="card-image">
-        <img src="/images/Planos.jpg" alt="blue print image" />
+        <img src="/images/Usuario.jpg" alt="blue print image" />
         <span class="card-title">
           Registrar Proyecto
         </span>
@@ -27,31 +27,68 @@
             <span style="color:red">Error: {{errorModel.nameError}} </span>
             {{/if}}
           </div>
+          <!-- Area -->
           <div class="input-field">
-            <label for="project-description">
-              Descripción
+            <label for="project-name">
+              Area
             </label>
-            <textarea
-              name="description"
-              id="project-description"
+            <input
+              placeholder="Ingrese el nombre del Area"
+              type="text"
+              id="project-area"
+              name="area"
+              class="validate"
+              value="{{project.area}}"
+              required
+            />
+            <span class="helper-text" data-error="Debe ingresar nombre del area" data-success="Correcto"></span>
+            {{#if errorModel.areaError}}
+            <span style="color:red">Error: {{errorModel.areaError}} </span>
+            {{/if}}
+          </div>
+          <!-- Cargo -->
+          <div class="input-field">
+            <label for="project-name">
+              Cargo 
+            </label>
+            <input
+              placeholder="Ingrese el cargo del usuario"
+              type="text"
+              id="project-cargo"
+              name="cargo"
+              class="validate"
+              value="{{project.cargo}}"
+              required
+            />
+            <span class="helper-text" data-error="Debe ingresar cargo del usuario" data-success="Correcto"></span>
+            {{#if errorModel.cargoError}}
+            <span style="color:red">Error: {{errorModel.cargoError}} </span>
+            {{/if}}
+          </div>
+          <!-- Codigo -->
+          <div class="input-field">
+            <label for="project-codigo">
+              Codigo
+            </label>
+            <input
+              name="codigo"
+              type="text"
+              id="project-codigo"
               class="materialize-textarea"
-              required >{{project.description}}</textarea>
+              required >{{project.codigo}}</input>
             <span class="helper-text" 
-                  data-error="Debe ingresar la Descripcion del proyecto" 
+                  data-error="Debe asignar un codigo para este usuario" 
                   data-success="Correcto"></span>
-            {{#if errorModel.descriptionError}}
-            <span style="color:red">Error: {{errorModel.descriptionError}} </span>
+            {{#if errorModel.codigoError}}
+            <span style="color:red">Error: {{errorModel.codigoError}} </span>
             {{/if}}
           </div>
         </div>
         <div class="card-action">
           <button
             type="submit"
-            class="blue darken-3 waves-effect waves-light btn"
-          >
-            <i class="material-icons left">
-              save
-            </i>
+            class="blue darken-3 waves-effect waves-light btn">
+            <i class="material-icons left"> save </i>
             Registrar
           </button>
         </div>

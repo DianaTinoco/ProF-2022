@@ -11,7 +11,15 @@ const ProjectSchema = new Schema({
     type: String,
     required: true,
   },
-  description: {
+  area: {
+    type: String,
+    required: true,
+  },
+  cargo: {
+    type: String,
+    required: true,
+  },
+  codigo: {
     type: String,
     required: true,
   },

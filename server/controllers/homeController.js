@@ -28,12 +28,29 @@ const index = (req, res) => {
 // URL: Get /about
 const about = (req, res) => {
   res.render('home/aboutView', {
-    name: 'Diana Laura',
-    email: 'dtinoco152@gmail.com',
-    url: 'https://github.com/DianaTinoco/primer-pwpcI-2021',
-    description:
-      'Aplicación que te permite registrar ideas de proyectos. PwpcII - 2022A',
-    version: '0.0.alpha',
+    cargo: 'Administradora',
+    name: 'Diana Laura Paredes Tinoco',
+    email: 'L181130113@gamadero.tecnm.mx',
+    cargo1: 'Administrador',
+    name1: 'Zuriel Roman Hernandez',
+    email1: 'L181130122@gamadero.tecnm.mx',
+  });
+};
+// URL: Get /area
+const area = (req, res) => {
+  res.render('home/areaView', {
+    cargo: 'Administradora',
+    name: 'Diana Laura Paredes Tinoco',
+    email: 'L181130113@gamadero.tecnm.mx',
+  });
+};
+
+// URL: Get /regis
+const regis = (req, res) => {
+  res.render('home/regisView', {
+    cargo: 'Administradora',
+    name: 'Diana Laura Paredes Tinoco',
+    email: 'L181130113@gamadero.tecnm.mx',
   });
 };
 
@@ -41,4 +58,6 @@ export default {
   // Action Methods
   index,
   about,
+  area,
+  regis,
 };

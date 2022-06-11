@@ -25,7 +25,7 @@ const add = (req, res) => {
   res.render('projects/addProjectView', {});
   // TODO: Agregar codigo para agregar proyectos
 };
-// Procesa el formulario que Agrega ideas de proyectos
+// Procesa el formulario que Agrega usuarios
 // POST /projects/add
 const addPost = async (req, res) => {
   // Desestructurando la informacion
