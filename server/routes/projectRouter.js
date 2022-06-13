@@ -13,7 +13,7 @@ import projectController from '../controllers/projectController';
 const router = new Router();
 
 /* ------- GET --------*/
-// Listar proyectos
+// Listar
 // GET: /projects/ | GET: /projects/index
 router.get(['/', '/index'], projectController.index);
 
@@ -22,7 +22,7 @@ router.get(['/', '/index'], projectController.index);
 router.get('/add', projectController.add);
 
 /* ----------- POST -------------------*/
-// Procesa el formulario que Agrega ideas de proyectos
+// Procesa el formulario que Agregar
 // POST /projects/add
 
 router.post(

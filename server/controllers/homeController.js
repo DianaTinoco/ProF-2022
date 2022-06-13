@@ -18,7 +18,7 @@ const index = (req, res) => {
     emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
   // View-Models
   const viewModel = {
-    title: 'Proyecto Final !!!',
+    title: 'Control de Acceso',
     author: 'Diana Laura Paredes Tinoco',
     emojie,
   };
@@ -38,20 +38,12 @@ const about = (req, res) => {
 };
 // URL: Get /area
 const area = (req, res) => {
-  res.render('home/areaView', {
-    cargo: 'Administradora',
-    name: 'Diana Laura Paredes Tinoco',
-    email: 'L181130113@gamadero.tecnm.mx',
-  });
+  res.render('home/areaView', {});
 };
 
 // URL: Get /regis
 const regis = (req, res) => {
-  res.render('home/regisView', {
-    cargo: 'Administradora',
-    name: 'Diana Laura Paredes Tinoco',
-    email: 'L181130113@gamadero.tecnm.mx',
-  });
+  res.render('home/regisView', {});
 };
 
 export default {
